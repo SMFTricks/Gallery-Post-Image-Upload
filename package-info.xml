@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>smftricks:gallerypostimage</id>
+	<name>[Gallery Addon] Post Image Upload</name>
+	<version>1.0</version>
+	<type>modification</type>
+	<install for="2.1 - 2.1.99">
+		<!-- Mod Readme -->
+		<!-- <readme lang="english" parsebbc="true" type="file">readme/readme.english.txt</readme> -->
+		<!-- License -->
+		<!-- <license type="inline" parsebbc="false">
+			This Source Code Form is subject to the terms of the Mozilla Public
+			License, v. 2.0. If a copy of the MPL was not distributed with this
+			file, You can obtain one at https://www.mozilla.org/en-US/MPL/2.0/.
+		</license> -->
+		<!-- Theme Files -->
+		<require-dir name="Themes" destination="$boarddir">Theme files</require-dir>
+		<!-- Source File -->
+		<require-dir name="Sources" destination="$boarddir">Source file</require-dir>
+		<!-- Hooks -->
+		<hook hook="integrate_actions" function="GalleryImageUpload::action" file="$sourcedir/GalleryImageUpload.php" />
+		<hook hook="integrate_display_buttons" function="GalleryImageUpload::loadJavaScript" file="$sourcedir/GalleryImageUpload.php" />
+		<hook hook="integrate_post_end" function="GalleryImageUpload::loadJavaScript" file="$sourcedir/GalleryImageUpload.php" />
+	</install>
+	
+	<uninstall for="2.1 - 2.1.99">
+		<!-- Hooks Remove -->
+		<hook hook="integrate_actions" function="GalleryImageUpload::action" file="$sourcedir/GalleryImageUpload.php" reverse="true" />
+		<hook hook="integrate_display_buttons" function="GalleryImageUpload::loadJavaScript" file="$sourcedir/GalleryImageUpload.php" reverse="true" />
+		<hook hook="integrate_post_end" function="GalleryImageUpload::loadJavaScript" file="$sourcedir/GalleryImageUpload.php" reverse="true" />
+		<!-- Source File -->
+		<remove-file name="$sourcedir/GalleryImageUpload.php">Source file</remove-file>
+		<!-- Theme Files -->
+		<remove-file name="$themedir/GalleryImageUpload.template.php">Template file</remove-file>
+		<remove-file name="$themedir/scripts/galleryimageupload.js">JS file</remove-file>
+	</uninstall>
+</package-info>
