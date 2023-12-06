@@ -16,5 +16,8 @@ This gallery addon/mini-MOD will allow users to quickly upload pictures to the g
 - Gallery Pro features:
   - User galleries
   - Custom fields
+
+### Requirements
+- [SMF Gallery](https://custom.simplemachines.org/index.php?mod=473) or [SMF Gallery Pro](https://www.smfhacks.com/smf-gallery-pro.php)
 ---
 ### [GitHub](https://github.com/SMFTricks/Gallery-Post-Image-Upload)
