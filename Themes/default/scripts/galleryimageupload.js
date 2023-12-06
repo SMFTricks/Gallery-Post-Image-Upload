@@ -3,7 +3,7 @@
  * @version 1.0
  * @author Diego Andrés <diegoandres_cortes@outlook.com>
  * @copyright Copyright (c) 2023, SMF Tricks
- * @license https://www.mozilla.org/en-US/MPL/2.0/
+ * @license MIT
  */
 
 function gallery_insert_text()
