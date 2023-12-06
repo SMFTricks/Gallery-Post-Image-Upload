@@ -6,14 +6,6 @@
 	<version>1.0</version>
 	<type>modification</type>
 	<install for="2.1 - 2.1.99">
-		<!-- Mod Readme -->
-		<!-- <readme lang="english" parsebbc="true" type="file">readme/readme.english.txt</readme> -->
-		<!-- License -->
-		<!-- <license type="inline" parsebbc="false">
-			This Source Code Form is subject to the terms of the Mozilla Public
-			License, v. 2.0. If a copy of the MPL was not distributed with this
-			file, You can obtain one at https://www.mozilla.org/en-US/MPL/2.0/.
-		</license> -->
 		<!-- Theme Files -->
 		<require-dir name="Themes" destination="$boarddir">Theme files</require-dir>
 		<!-- Source File -->
