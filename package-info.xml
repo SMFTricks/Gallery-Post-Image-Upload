@@ -6,6 +6,19 @@
 	<version>1.0</version>
 	<type>modification</type>
 	<install for="2.1 - 2.1.99">
+		<!-- Throw error if PHP version too old -->
+		<code type="inline"><![CDATA[<?php
+			define('REQUIRED_PHP_VERSION', '8.0.0');
+			if (version_compare(PHP_VERSION, REQUIRED_PHP_VERSION, '<'))
+				fatal_error(
+					sprintf(
+						'This mod requires a minimum of PHP %s in order to function. (You are currently running PHP %s)',
+						REQUIRED_PHP_VERSION,
+						PHP_VERSION
+					),
+					false
+				);
+		?>]]></code>
 		<!-- Theme Files -->
 		<require-dir name="Themes" destination="$boarddir">Theme files</require-dir>
 		<!-- Source File -->
