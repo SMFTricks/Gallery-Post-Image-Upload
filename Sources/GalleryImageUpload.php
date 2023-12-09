@@ -241,7 +241,7 @@ class GalleryImageUpload
 	 */
 	private function save() : void
 	{
-		global $smcFunc, $modSettings, $txt, $user_info, $gallerySettings, $sourcedir, $scripturl;
+		global $smcFunc, $modSettings, $txt, $user_info, $gallerySettings, $sourcedir, $scripturl, $boarddir;
 		
 		// By default there's an error for the response
 		http_response_code(401);
@@ -277,6 +277,9 @@ class GalleryImageUpload
 			echo $txt['cannot_smfgallery_add'];
 			exit;
 		}
+
+		// Get a gallery path
+		$modSettings['gallery_path'] = ($modSettings['gallery_path'] ?? $boarddir . '/gallery/');
 
 		// Check if gallery path is writable
 		if (!is_writable($modSettings['gallery_path']))
