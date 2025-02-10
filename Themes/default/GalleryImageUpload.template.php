@@ -136,7 +136,7 @@ function template_galleryimageupload()
 				</dd>
 
 				<dt>
-					<label for="gallery_file">', $txt['gallery_form_title'], '</label>
+					<label for="gallery_file">', $txt['gallery_form_uploadpic'], '</label>
 				</dt>
 				<dd>
 					<input name="picture" id="gallery_file" type="file" accept="image/gif, image/jpeg, image/jpg, image/png, video/mp4" required>
